@@ -1,0 +1,102 @@
+:root {
+    --shadow: 0 3px 5px rgba(0, 0, 0, 0.157);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, orange, purple);
+}
+
+.container {
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    border: none;
+    box-shadow: var(--shadow);
+    width: 200px;
+    padding: 15px;
+    border-radius: 3px;
+    outline: none;
+    font-size: 18px;
+    color: rgb(110, 110, 110);
+    margin-right: 5px;
+}
+
+button {
+    border: none;
+    background-color: orange;
+    box-shadow: var(--shadow);
+    width: 50px;
+    border-radius: 3px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+button:hover::before {
+    content: "Add";
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    color: orange;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.details {
+    max-width: 800px;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    width: 150px;
+    height: 100px;
+    box-shadow: var(--shadow);
+    background-color: white;
+    color: rgb(75, 75, 75);
+    border-radius: 3px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+
+section:hover {
+    transform: translateY(-6px);
+}
